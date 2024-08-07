@@ -8,14 +8,14 @@ const incorrectEventsList = document.getElementById('incorrectEvents');
 const inputFields = document.querySelectorAll('#input input');
 
 checkButton.addEventListener('click', function() {
-    let userOrder = Array.from(inputFields).map(input => input.value).join(' ');
+    let userOrder = Array.from(inputFields).map(input => input.value.toUpperCase()).join(' ');
 
     if (userOrder === correctOrder.join(' ')) {
         correctEventsList.innerHTML = '';
         incorrectEventsList.innerHTML = '';
         correctOrder.forEach(event => {
             const li = document.createElement('li');
-            li.textContent = event;
+            li.textContent = getEventName(event);
             correctEventsList.appendChild(li);
         });
     } else {
@@ -24,10 +24,10 @@ checkButton.addEventListener('click', function() {
         correctOrder.forEach((event, index) => {
             const li = document.createElement('li');
             if (event === userOrder.split(' ')[index]) {
-                li.textContent = event;
+                li.textContent = getEventName(event);
                 correctEventsList.appendChild(li);
             } else {
-                li.textContent = event;
+                li.textContent = getEventName(event);
                 incorrectEventsList.appendChild(li);
             }
         });
@@ -45,3 +45,22 @@ window.addEventListener('click', function(event) {
         modal.style.display = 'none';
     }
 });
+
+function getEventName(event) {
+    switch(event) {
+        case 'A':
+            return 'The Fall of Constantinople';
+        case 'B':
+            return 'American Revolution';
+        case 'C':
+            return 'American Civil War';
+        case 'D':
+            return 'World War 1';
+        case 'E':
+            return 'World War 2';
+        case 'F':
+            return 'Fall of the Berlin Wall';
+        default:
+            return 'Unknown Event';
+    }
+}
