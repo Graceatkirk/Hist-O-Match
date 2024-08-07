@@ -3,33 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hist-O-Match woooooo</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Hist-O-Match</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css" crossorigin="anonymous">
 </head>
 <body>
     <header>
         <h1>Hist-O-Match</h1>
         <p>Description of our game</p>
+
     </header>
     <main>
-        <section>
-            <div class="card" draggable="true">Card 1</div>
-            <div class="card" draggable="true">Card 2</div>
-            <div class="card" draggable="true">Card 3</div>
-            <div class="card" draggable="true">Card 4</div>
-            <div class="card" draggable="true">Card 5</div>
-            <div class="card" draggable="true">Card 6</div>
-        </section>
-        <section>
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x small-up-2 medium-up-3">
+              <div class="cell">
+                <div class="card">
+                    <h4>A</h4>
+                  <img src="assets/pics/Constantinople.jpeg">
+                  <div class="card-section">
+                  <h4>The Fall of Constantinople</h4>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="cell">
+                <div class="card">
+                    <h4>B</h4>
+                  <img src="assets/pics/washington-crosses-the-delaware.jpg">
+                  <div class="card-section">
+                    <h4>American Revolution</h4>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="cell">
+                <div class="card">
+                    <h4>C</h4>
+                  <img src="assets/pics/CivilWar.jpg">
+                  <div class="card-section">
+                    <h4>American Civil War</h4>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+            <div class="cell">
+              <div class="card">
+                <h4>D</h4>
+                <img src="assets/pics/world-war-one.jpg">
+                <div class="card-section">
+                  <h4>World War 1</h4>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+            <div class="cell">
+              <div class="card">
+                <h4>E</h4>
+                <img src="assets/pics/world-war-two.jpg">
+                <div class="card-section">
+                  <h4>World War 2</h4>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+            <div class="cell">
+              <div class="card">
+                <h4>F</h4>
+                <img src="assets/pics/berlinwall.jpg">
+                <div class="card-section">
+                  <h4>Fall of the Berlin Wall</h4>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <section id="input">
             <input type="text" placeholder="Input 1">
             <input type="text" placeholder="Input 2">
             <input type="text" placeholder="Input 3">
             <input type="text" placeholder="Input 4">
             <input type="text" placeholder="Input 5">
             <input type="text" placeholder="Input 6">
+        </section> 
+        <section>
+          <button id="checkButton">Check</button>
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Game Results</h2>
+              <p>Correctly Ordered Events:</p>
+              <ul id="correctEvents"></ul>
+              <p>Incorrectly Ordered Events:</p>
+              <ul id="incorrectEvents"></ul>
+            </div>
+          </div>
         </section>
     </main>
 
     <script src="script.js"></script>
 </body>
+
+<!--
+Fall of Constantinople 1453
+World War 2 Start 1939
+World War 1 Start 1914
+Berlin Wall Fall 1989
+American Revolution 1775
+US Civil War 1861
+-->
+
 </html>
