@@ -1,40 +1,23 @@
-:root {
-    --header-bg-color: #333;
-    --light: #f4f4f4;
+header {
+    display: block;
+    text-align: center;
+    border: solid 2px black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    ;
 }
-
 
 body {
-    font-family: 'Roboto', sans-serif !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-header {
-    background-color: var(--header-bg-color)!important;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2) !important;
-    padding: 10px 0 !important;
-    top: 0 !important;
-    width: 100% !important;
-    color: var(--light) !important;
-}
-
-header h1 {
-    margin: 0 !important;
-    padding: 0 !important;
-    text-align: center !important;
-}
-
-header p {
-    color: var(--light) !important;
-    text-decoration: none !important;
-    text-align: center !important;  
+    border: solid 2px black;
+    border-radius: 10px;
 }
 
 .card {
     border-radius: 3% !important;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2) !important;
-    margin: 10px !important;
+    margin: 0 auto !important;
+    margin-top: 20px !important;
     padding: 10px !important;
     width: 200px !important;
     height: 300px !important;
@@ -51,4 +34,54 @@ h4 {
     font-size: 20px !important;
     font-weight: bold !important;
     margin: 10px 0 !important;
+    text-align: center;
+}
+
+.year {
+    display: none;
+    justify-content: center;
+    }
+
+#checkButton {
+    margin: 10px;
+    padding: 0px 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: greenyellow;
+}
+
+#answer-container {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin: 0 auto;
+    width: fit-content;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#myModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+input[type="text"] {
+    border-radius: 10%;
+    width: 100px;
+    margin: 10px;
+}
+
+.modal-content {
+    border: 2px solid black;
+    padding: 10px;
+    background-color: RGB(173, 255, 47, .8);
 }
