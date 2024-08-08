@@ -78,16 +78,29 @@
             </div>
           </div>
       </section>
-      <section id="answer-container">
-        <input type="text" placeholder="First">
-        <input type="text" placeholder="Second">
-        <input type="text" placeholder="Third" >
-        <input type="text" placeholder="Fourth">
-        <input type="text" placeholder="Fifth">
-        <input type="text" placeholder="Sixth">
-      </section> 
+      <form id="answer-container">
+        <input type="text" id="first" placeholder="First">
+        <input type="text" id="second" placeholder="Second">
+        <input type="text" id="third" placeholder="Third" >
+        <input type="text" id="fourth" placeholder="Fourth">
+        <input type="text" id="fifth" placeholder="Fifth">
+        <input type="text" id="sixth" placeholder="Sixth">
+        <button id="checkButton">Check</button>
+      </form>
+     
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Game Results</h2>
+          <p>Correctly Ordered Events:</p>
+          <ul id="correctEvents"></ul>
+          <p>Incorrectly Ordered Events:</p>
+          <ul id="incorrectEvents"></ul>
+        </div>
+      </div> 
+
     </main>
-    <script src="script.js"></script>
+    <script src="./assets/script.js"></script>
 </body>
 
 <!--
