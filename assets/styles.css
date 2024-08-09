@@ -9,6 +9,7 @@ header {
     margin: 10px;
     background-color: rgb(163, 81, 5) !important;
     color: white
+    
 }
 
 main {
@@ -29,7 +30,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 .card {
     border-radius: 3% !important;
@@ -71,7 +71,29 @@ h4 {
     padding: 0px 5px;
     border: 2px solid black;
     border-radius: 10px;
-    background-color: greenyellow;
+    background-color: rgb(163, 81, 5);
+}
+
+#timer {
+    margin: 10px;
+    padding: 0px 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 70px;
+    background-color: rgb(163, 81, 5);
+}
+
+#startButton {
+    margin: 10px;
+    padding: 0px 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(163, 81, 5);
+}
+
+#startButton:hover {
+    background-color: rgb(163, 81, 5);
+    color: white;
 }
 
 #answer-container {
@@ -107,5 +129,31 @@ input[type="text"] {
 .modal-content {
     border: 2px solid black;
     padding: 10px;
-    background-color: RGB(173, 255, 47, .8);
+    background-color: rgb(163, 81, 5);
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    .grid-x {
+        grid-template-columns: 1fr;
+    }
+
+    .cell {
+        width: 100%;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
 }

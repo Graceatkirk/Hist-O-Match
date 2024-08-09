@@ -6,6 +6,8 @@ const closeBtn = document.getElementsByClassName('close')[0];
 const correctEventsList = document.getElementById('correctEvents');
 const incorrectEventsList = document.getElementById('incorrectEvents');
 const year = document.getElementsByClassName('year');
+const timer = document.getElementById('timer');
+const startButton = document.getElementById('startButton');
 
 console.log(correctOrder.join(' '));
 console.log(correctOrder);
@@ -14,8 +16,10 @@ console.log(correctOrder);
 checkButton.addEventListener('click', function(event) {
     event.preventDefault();
     let userOrder = Array.from(document.querySelectorAll('#answer-container input')).map(input => input.value.toUpperCase()).join(' ');
+    localStorage.setItem('userOrder', userOrder);
  console.log(userOrder)   
     if (userOrder === correctOrder.join(' ')) {
+        clearInterval(timerInterval);
         correctEventsList.innerHTML = '';
         incorrectEventsList.innerHTML = '';
         for (let i = 0; i < year.length; i++) {
@@ -26,6 +30,14 @@ checkButton.addEventListener('click', function(event) {
             li.textContent = getEventName(event);
             correctEventsList.appendChild(li);
         });
+        if (localStorage.getItem('userOrder') === correctOrder) {
+            time;
+        }
+        localStorage.setItem('time', time);
+    
+        console.log(correctOrder);
+        console.log(localStorage.getItem('userOrder'));
+        console.log(localStorage.getItem('userOrder') === correctOrder);
     } else {
         correctEventsList.innerHTML = '';
         incorrectEventsList.innerHTML = '';
@@ -54,15 +66,6 @@ window.addEventListener('click', function(event) {
     }
 });
 
-/*function getYear() {
-    if (userOrder === correctOrder.join(' ')) {
-       year.display = 'flex';
-    }
-    else {
-        year.display = 'none';
-    }
-} */
-
 function getEventName(event) {
     switch(event) {
         case 'A':
@@ -81,3 +84,15 @@ function getEventName(event) {
             return 'Unknown Event';
     }
 }
+
+let time = 0;
+let timerInterval = null;
+
+startButton.addEventListener('click', function() {
+    startButton.style.display = 'none';
+    var t = 0;
+    timerInterval = setInterval(() => {
+        t++;
+        timer.textContent = t;
+    }, 1000);
+});
