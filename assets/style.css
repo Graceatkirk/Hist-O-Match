@@ -31,7 +31,7 @@ header {
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
-    background-color: rgb(163, 81, 5) !important;
+    background-color: rgba(139, 70, 5, 0.753) !important;
     color: white
 }
 
@@ -53,7 +53,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 .card {
     border-radius: 3% !important;
