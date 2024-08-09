@@ -5,7 +5,10 @@ const modal = document.getElementById('myModal');
 const closeBtn = document.getElementsByClassName('close')[0];
 const correctEventsList = document.getElementById('correctEvents');
 const incorrectEventsList = document.getElementById('incorrectEvents');
+
 const year = document.getElementsByClassName('year');
+=======
+
 
 console.log(correctOrder.join(' '));
 console.log(correctOrder);
@@ -18,9 +21,11 @@ checkButton.addEventListener('click', function(event) {
     if (userOrder === correctOrder.join(' ')) {
         correctEventsList.innerHTML = '';
         incorrectEventsList.innerHTML = '';
+
         for (let i = 0; i < year.length; i++) {
             year[i].style.display = 'flex';
         }
+
         correctOrder.forEach(event => {
             const li = document.createElement('li');
             li.textContent = getEventName(event);
@@ -54,14 +59,6 @@ window.addEventListener('click', function(event) {
     }
 });
 
-/*function getYear() {
-    if (userOrder === correctOrder.join(' ')) {
-       year.display = 'flex';
-    }
-    else {
-        year.display = 'none';
-    }
-} */
 
 function getEventName(event) {
     switch(event) {
