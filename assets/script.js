@@ -5,17 +5,27 @@ const modal = document.getElementById('myModal');
 const closeBtn = document.getElementsByClassName('close')[0];
 const correctEventsList = document.getElementById('correctEvents');
 const incorrectEventsList = document.getElementById('incorrectEvents');
-const inputFields = document.querySelectorAll('#input input');
 
-checkButton.addEventListener('click', function() {
-    let userOrder = Array.from(inputFields).map(input => input.value).join(' ');
+const year = document.getElementsByClassName('year');
 
+
+console.log(correctOrder.join(' '));
+console.log(correctOrder);
+
+
+checkButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    let userOrder = Array.from(document.querySelectorAll('#answer-container input')).map(input => input.value.toUpperCase()).join(' ');
+ console.log(userOrder)   
     if (userOrder === correctOrder.join(' ')) {
         correctEventsList.innerHTML = '';
         incorrectEventsList.innerHTML = '';
+        for (let i = 0; i < year.length; i++) {
+            year[i].style.display = 'flex';
+        }
         correctOrder.forEach(event => {
             const li = document.createElement('li');
-            li.textContent = event;
+            li.textContent = getEventName(event);
             correctEventsList.appendChild(li);
         });
     } else {
@@ -24,16 +34,16 @@ checkButton.addEventListener('click', function() {
         correctOrder.forEach((event, index) => {
             const li = document.createElement('li');
             if (event === userOrder.split(' ')[index]) {
-                li.textContent = event;
+                li.textContent = getEventName(event);
                 correctEventsList.appendChild(li);
             } else {
-                li.textContent = event;
+                li.textContent = getEventName(event);
                 incorrectEventsList.appendChild(li);
             }
         });
     }
 
-    modal.style.display = 'block';
+    modal.style.display = 'flex';
 });
 
 closeBtn.addEventListener('click', function() {
@@ -45,3 +55,22 @@ window.addEventListener('click', function(event) {
         modal.style.display = 'none';
     }
 });
+
+function getEventName(event) {
+    switch(event) {
+        case 'A':
+            return 'The Fall of Constantinople';
+        case 'B':
+            return 'American Revolution';
+        case 'C':
+            return 'American Civil War';
+        case 'D':
+            return 'World War 1';
+        case 'E':
+            return 'World War 2';
+        case 'F':
+            return 'Fall of the Berlin Wall';
+        default:
+            return 'Unknown Event';
+    }
+}
