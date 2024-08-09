@@ -5,14 +5,24 @@ const modal = document.getElementById('myModal');
 const closeBtn = document.getElementsByClassName('close')[0];
 const correctEventsList = document.getElementById('correctEvents');
 const incorrectEventsList = document.getElementById('incorrectEvents');
-const inputFields = document.querySelectorAll('#input input');
 
-checkButton.addEventListener('click', function() {
-    let userOrder = Array.from(inputFields).map(input => input.value.toUpperCase()).join(' ');
+const year = document.getElementsByClassName('year');
 
+
+console.log(correctOrder.join(' '));
+console.log(correctOrder);
+
+
+checkButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    let userOrder = Array.from(document.querySelectorAll('#answer-container input')).map(input => input.value.toUpperCase()).join(' ');
+ console.log(userOrder)   
     if (userOrder === correctOrder.join(' ')) {
         correctEventsList.innerHTML = '';
         incorrectEventsList.innerHTML = '';
+        for (let i = 0; i < year.length; i++) {
+            year[i].style.display = 'flex';
+        }
         correctOrder.forEach(event => {
             const li = document.createElement('li');
             li.textContent = getEventName(event);
@@ -33,7 +43,7 @@ checkButton.addEventListener('click', function() {
         });
     }
 
-    modal.style.display = 'block';
+    modal.style.display = 'flex';
 });
 
 closeBtn.addEventListener('click', function() {
