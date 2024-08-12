@@ -23,7 +23,6 @@ checkButton.addEventListener('click', function(event) {
     } else {
         showIncorrect(userOrder);
     }
-});
 
 closeBtn.addEventListener('click', function() {
     modal.style.display = 'none';
@@ -34,7 +33,7 @@ window.addEventListener('click', function(event) {
         modal.style.display = 'none';
     }
 });
-
+  
 function startTimer(event) {
     event.preventDefault();
     startModal.style.display = 'none';
@@ -48,7 +47,6 @@ function startTimer(event) {
         timer.textContent = "Time: "+ seconds.toFixed(0);
     }, 10);
 }
-
 function getEventName(event) {
     switch(event) {
         case 'A':
@@ -66,6 +64,7 @@ function getEventName(event) {
         default:
             return 'Unknown Event';
     }
+
 }
 
 function endGame() {
@@ -117,4 +116,5 @@ function checkScores() {
         }
         localStorage.setItem('highScores', JSON.stringify(scoreArray));
     }
+
 }
