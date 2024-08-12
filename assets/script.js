@@ -34,7 +34,6 @@ window.addEventListener('click', function(event) {
         modal.style.display = 'none';
     }
 });
-
 function startTimer(event) {
     event.preventDefault();
     startModal.style.display = 'none';
@@ -48,7 +47,6 @@ function startTimer(event) {
         timer.textContent = "Time: "+ seconds.toFixed(0);
     }, 10);
 }
-
 function getEventName(event) {
     switch(event) {
         case 'A':
