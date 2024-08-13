@@ -1,4 +1,8 @@
 # Hist-O-Match
+
+## Gihub Link
+https://graceatkirk.github.io/Hist-O-Match/
+
 ## History Matching Game
  Looking at the six cards on the screen, the player must type the cards' corresponding letters into the input boxes at the bottom of the page. Enter the cards in the order that the events occured thoughout history!
  These topics can vary from US History to World History, be sure that you have your thinking cap on!
