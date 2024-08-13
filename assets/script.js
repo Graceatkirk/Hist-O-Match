@@ -82,6 +82,8 @@ function endGame() {
     time = time/100;
     yourTime.textContent = "Your time: " + time + " seconds";    
     checkScores();
+    playAgain.style.display = 'flex';
+    closeBtn.style.display = 'none';
     playAgain.addEventListener('click', function() {  
         location.reload();
     });

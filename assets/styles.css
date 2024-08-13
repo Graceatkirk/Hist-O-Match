@@ -145,11 +145,16 @@ h4 {
 }
 
 #playAgain {
+    display: none;
     font-size: 3rem;
     background-color: greenyellow;
     padding: 10px;
     border: 5px solid white;
     border-radius: 15px;
+}
+
+.close {
+    display: flex;
 }
 
 input[type="text"] {
