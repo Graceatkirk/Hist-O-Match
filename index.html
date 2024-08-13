@@ -4,111 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hist-O-Match</title>
+
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css" crossorigin="anonymous">
 </head>
 <body>
-    <header>
-        <h1>Hist-O-Match</h1>
-        <p>The goal of Hist-O-Match is to correctly place the historical events in the order that they occured. You do this by inputing the corresponding letters in the input box </p>
-
-    </header>
-    <main>
-        <section class="grid-container">
-            <div class="grid-x grid-margin-x small-up-2 medium-up-3">
-              <div class="cell">
-                <div class="card">
-                    <h4>A</h4>
-                  <img src="assets/pics/Constantinople.jpeg">
-                  <div class="card-section">
-                  <h4>The Fall of Constantinople</h4>
-                    <span class="year">1453</span>
-                  </div>
-                </div>
-              </div>
-              <div class="cell">
-                <div class="card">
-                    <h4>B</h4>
-                  <img src="assets/pics/washington-crosses-the-delaware.jpg">
-                  <div class="card-section">
-                    <h4>American Revolution</h4>
-                    <span class="year">1775</span>
-                  </div>
-                </div>
-              </div>
-              <div class="cell">
-                <div class="card">
-                    <h4>C</h4>
-                  <img src="assets/pics/CivilWar.jpg">
-                  <div class="card-section">
-                    <h4>American Civil War</h4>
-                    <span class="year">1861</span>
-                  </div>
-                </div>
-              </div>
-            <div class="cell">
-              <div class="card">
-                <h4>D</h4>
-                <img src="assets/pics/world-war-one.jpg">
-                <div class="card-section">
-                  <h4>World War 1</h4>
-                  <span class="year">1914</span>
-                </div>
-              </div>
-            </div>
-            <div class="cell">
-              <div class="card">
-                <h4>E</h4>
-                <img src="assets/pics/world-war-two.jpg">
-                <div class="card-section">
-                  <h4>World War 2</h4>
-                  <span class="year">1945</span>
-                </div>
-              </div>
-            </div>
-            <div class="cell">
-              <div class="card">
-                <h4>F</h4>
-                <img src="assets/pics/berlinwall.jpg">
-                <div class="card-section">
-                  <h4>Fall of the Berlin Wall</h4>
-                  <span class="year">1989</span>
-                </div>
-              </div>
+  <header>
+    <h1>Hist-O-Match</h1>
+      <p>The goal of Hist-O-Match is to correctly place the historical events in the order that they occurred. You do this by inputing the corresponding letters in the input box</p>
+  </header>
+  <main>
+    <section id="startModal">
+      <button id="startButton">START</button>
+    </section>
+    <section class="grid-container">
+      <div class="grid-x grid-margin-x small-up-2 medium-up-3">
+        <div class="cell">
+          <div class="card">
+            <h4>A</h4>
+            <img src="assets/pics/world-war-one.jpg">
+            <div class="card-section">
+              <h4>World War 1</h4>
+              <span class="year">1914</span>
             </div>
           </div>
-        </section>  
-        <form id="answer-container">
-          <input type="text" id="first" placeholder="First">
-          <input type="text" id="second" placeholder="Second">
-          <input type="text" id="third" placeholder="Third" >
-          <input type="text" id="fourth" placeholder="Fourth">
-          <input type="text" id="fifth" placeholder="Fifth">
-          <input type="text" id="sixth" placeholder="Sixth">
-          <button id="checkButton">Check</button>
-        </form>
-       
-        <div id="myModal" class="modal">
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Game Results</h2>
-            <p>Correctly Ordered Events:</p>
-            <ul id="correctEvents"></ul>
-            <p>Incorrectly Ordered Events:</p>
-            <ul id="incorrectEvents"></ul>
+        </div>
+        <div class="cell">
+          <div class="card">
+            <h4>B</h4>
+            <img src="assets/pics/CivilWar.jpg">
+            <div class="card-section">
+              <h4>American Civil War</h4>
+              <span class="year">1861</span>
+            </div>
           </div>
-        </div> 
-  
-      </main>
-      <script src="./assets/script.js"></script>
-  </body>
-  
-
-<!--
-Fall of Constantinople 1453
-World War 2 Start 1939
-World War 1 Start 1914
-Berlin Wall Fall 1989
-American Revolution 1775
-US Civil War 1861
--->
+        </div>
+        <div class="cell">
+          <div class="card">
+            <h4>C</h4>
+              <img src="assets/pics/world-war-two.jpg">
+              <div class="card-section">
+                <h4>World War 2</h4>
+                <span class="year">1945</span>
+            </div>
+          </div>
+        </div>
+        <div class="cell">
+          <div class="card">
+            <h4>D</h4>
+              <img src="assets/pics/Constantinople.jpeg">
+            <div class="card-section">
+                <h4>The Fall of Constantinople</h4>
+                <span class="year">1453</span>
+            </div>
+          </div>
+        </div>
+        <div class="cell">
+          <div class="card">
+            <h4>E</h4>
+              <img src="assets/pics/berlinwall.jpg">
+              <div class="card-section">
+                <h4>Fall of the Berlin Wall</h4>
+                <span class="year">1989</span>
+            </div>
+          </div>
+        </div>
+        <div class="cell">
+          <div class="card">
+            <h4>F</h4>
+            <img src="assets/pics/washington-crosses-the-delaware.jpg">
+            <div class="card-section">
+              <h4>American Revolution</h4>
+              <span class="year">1775</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>  
+    <form id="answer-container">
+      <div id="timer">Time: 0</div>
+      <input type="text" id="first" placeholder="First">
+      <input type="text" id="second" placeholder="Second">
+      <input type="text" id="third" placeholder="Third" >
+      <input type="text" id="fourth" placeholder="Fourth">
+      <input type="text" id="fifth" placeholder="Fifth">
+      <input type="text" id="sixth" placeholder="Sixth">
+      <button id="checkButton">Check</button>
+    </form>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Game Results</h2>
+        <p>Correctly Ordered Events:</p>
+          <ul id="correctEvents"></ul>
+        <p>Incorrectly Ordered Events:</p>
+          <ul id="incorrectEvents"></ul>
+        <p id="yourTime"></p>
+      </div>
+      <button id="playAgain">Play Again</button>
+    </div> 
+  </main>
+  <script src="./assets/script.js"></script>
+</body>
