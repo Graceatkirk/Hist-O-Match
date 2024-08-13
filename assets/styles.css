@@ -144,6 +144,14 @@ h4 {
     align-items: center;
 }
 
+#playAgain {
+    font-size: 3rem;
+    background-color: greenyellow;
+    padding: 10px;
+    border: 5px solid white;
+    border-radius: 15px;
+}
+
 input[type="text"] {
     border-radius: 10%;
     width: 100px;

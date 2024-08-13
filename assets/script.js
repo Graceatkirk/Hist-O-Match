@@ -1,4 +1,4 @@
-const correctOrder = ['A', 'B', 'C', 'D', 'E', 'F'];
+const correctOrder = ['D', 'F', 'B', 'A', 'C', 'E'];
 
 const checkButton = document.getElementById('checkButton');
 const modal = document.getElementById('myModal');
@@ -10,6 +10,7 @@ const year = document.getElementsByClassName('year');
 const timer = document.getElementById('timer');
 const startButton = document.getElementById('startButton');
 const yourTime = document.getElementById('yourTime');
+const playAgain = document.getElementById('playAgain');
 
 let time, timerInterval;
 
@@ -49,17 +50,17 @@ function startTimer(event) {
 }
 function getEventName(event) {
     switch(event) {
-        case 'A':
-            return 'The Fall of Constantinople';
-        case 'B':
-            return 'American Revolution';
-        case 'C':
-            return 'American Civil War';
         case 'D':
-            return 'World War 1';
-        case 'E':
-            return 'World War 2';
+            return 'The Fall of Constantinople';
         case 'F':
+            return 'American Revolution';
+        case 'B':
+            return 'American Civil War';
+        case 'A':
+            return 'World War 1';
+        case 'C':
+            return 'World War 2';
+        case 'E':
             return 'Fall of the Berlin Wall';
         default:
             return 'Unknown Event';
@@ -81,7 +82,12 @@ function endGame() {
     time = time/100;
     yourTime.textContent = "Your time: " + time + " seconds";    
     checkScores();
+    playAgain.addEventListener('click', function() {  
+        location.reload();
+    });
+
     modal.style.display = 'flex';
+    modal.style.flexDirection = 'column';
 }
 
 function showIncorrect(userOrder) {
